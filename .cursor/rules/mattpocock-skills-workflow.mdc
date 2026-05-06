@@ -1,0 +1,28 @@
+---
+description: How to use this repo's Matt Pocock skills in Cursor (setup docs, domain language, and skill entry points).
+alwaysApply: true
+---
+
+# Matt Pocock Skills (Cursor)
+
+## Where the skill content lives
+
+- Canonical skill instructions are vendored under `skills/**/SKILL.md`
+- Cursor entry points (invoke by skill name) are under `.cursor/skills/**/SKILL.md`
+
+## Setup dependency (issue tracker + domain docs)
+
+Some engineering skills assume per-repo config in `docs/agents/`:
+
+- `docs/agents/issue-tracker.md`
+- `docs/agents/triage-labels.md`
+- `docs/agents/domain.md`
+
+If any of those are missing and the user asks to run `triage`, `to-issues`, or `to-prd`, run `setup-matt-pocock-skills` first.
+
+## Domain language + decisions
+
+Prefer using (and updating) these docs as you work:
+
+- `CONTEXT.md` (domain glossary + jargon)
+- `docs/adr/` (architectural decisions)

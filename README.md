@@ -22,24 +22,17 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 
 ## Quickstart (30-second setup)
 
-1. Run the skills.sh installer:
+This repo is set up to work in **Cursor** using project skills, rules, and hooks.
 
-```bash
-npx skills@latest add mattpocock/skills
-```
+1. Open this repo in Cursor.
 
-2. Pick the skills you want, and which coding agents you want to install them on. **Make sure you select `/setup-matt-pocock-skills`**.
+2. Invoke `setup-matt-pocock-skills` (Cursor skill) to scaffold per-repo config under `docs/agents/`.
 
-3. Run `/setup-matt-pocock-skills` in your agent. It will:
-   - Ask you which issue tracker you want to use (GitHub, Linear, or local files)
-   - Ask you what labels you apply to ticks when you triage them (`/triage` uses labels)
-   - Ask you where you want to save any docs we create
-
-4. Bam - you're ready to go.
+3. Invoke any other skill by name (Cursor project skills live in `.cursor/skills/`).
 
 ## Why These Skills Exist
 
-I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents.
+I built these skills as a way to fix common failure modes I see with coding agents.
 
 ### #1: The Agent Didn't Do What I Want
 
@@ -167,7 +160,6 @@ General workflow tools, not code-specific.
 
 Tools I keep around but rarely use.
 
-- **[git-guardrails-claude-code](./skills/misc/git-guardrails-claude-code/SKILL.md)** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.
 - **[migrate-to-shoehorn](./skills/misc/migrate-to-shoehorn/SKILL.md)** — Migrate test files from `as` type assertions to @total-typescript/shoehorn.
 - **[scaffold-exercises](./skills/misc/scaffold-exercises/SKILL.md)** — Create exercise directory structures with sections, problems, solutions, and explainers.
 - **[setup-pre-commit](./skills/misc/setup-pre-commit/SKILL.md)** — Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests.
